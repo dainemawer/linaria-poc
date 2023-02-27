@@ -1,0 +1,23 @@
+{
+  "name": "hello-poc",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "dev:project-one": "npm run dev -w=project-one",
+    "dev:project-two": "npm run dev -w=project-two",
+    "components:storybook": "npm run storybook -w=package-components",
+    "components:build": "npm run build-storybook -w=package-components"
+  },
+  "workspaces": [
+    "packages/*",
+    "projects/*"
+  ],
+  "engines": {
+    "node": ">=16",
+    "npm": ">=7"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

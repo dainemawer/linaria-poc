@@ -1,0 +1,36 @@
+import { Canvas, Meta, Story, Source } from '@storybook/addon-docs';
+import Button from '.'
+
+<Meta title="Components/Button" component={Button} />
+
+# Primary Button
+<Canvas>
+	<Story name="Primary">
+		<Button primary>Subscribe</Button>
+	</Story>
+</Canvas>
+
+# Secondary Button
+<Canvas>
+	<Story name="Secondary">
+		<Button secondary>Subscribe</Button>
+	</Story>
+</Canvas>
+
+# Icon Button
+<Canvas>
+	<Story name="Icon">
+		<Button primary icon>Subscribe</Button>
+		<Button secondary icon>Subscribe</Button>
+	</Story>
+</Canvas>
+
+# Disabled Button
+<Canvas>
+	<Story name="Disabled">
+		<Button primary disabled>Subscribe</Button>
+		<Button secondary disabled>Subscribe</Button>
+		<Button primary icon disabled>Subscribe</Button>
+		<Button secondary icon disabled>Subscribe</Button>
+	</Story>
+</Canvas>
