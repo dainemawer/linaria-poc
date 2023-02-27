@@ -43,7 +43,7 @@ export interface IArticleProps {
     date?: string;
     category?: string;
     className?: string;
-    style?: string;
+    style?: object;
     width?: string;
     height?: string;
 }
