@@ -15,6 +15,19 @@ const HeroContainer = styled.section`
     max-width: 1280px;
 `;
 
+/**
+ * When using Linaria its really important to break everything down into smaller components.
+ * This helps with readability and maintainability.
+ * 
+ * The Hero component is a good example of this. It is made up of 3 components:
+ * 1. HeroContainer
+ * 2. PrimaryHeroCard
+ * 3. HeroGrid
+ * 
+ * The HeroContainer is a simple styled component that sets the grid layout for the Hero component.
+ * All other styling is handled for each component: PrimaryHeroCard and HeroGrid.
+ * 
+ */
 const Hero: React.FC<IHeroProps> = (props) => {
     const { articles } = props;
     const primary = articles[0];

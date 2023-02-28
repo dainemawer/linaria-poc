@@ -29,10 +29,6 @@ export interface IThemeProps {
     }
 }
 
-interface IntrinsicElements {
-    style: any;
-}
-
 // Article Props
 export interface IArticleProps {
     hasBackground?: boolean;

@@ -4,6 +4,19 @@ import { SiteThemeContext } from 'package-components/context';
 import { IButtonProps, IStyleButtonProps } from 'package-types/horizon';
 import Icon from '../Icon/index';
 
+/**
+ * Similiar to Styled Components, this component creates a button element and styles it.
+ * Every styled function allows you to pass props to be used to manage css values dynamically.
+ * 
+ * This component is also made type safe by passing through the IStyleButtonProps interface.
+ * This gives us the ability to make sure that we dont pass values that should not be used.
+ * 
+ * THIS IS NOT A REACT COMPONENT, it is a function that returns a React component.
+ * 
+ * @param {string} backgroundColor - The background color of the button.
+ * @param {string} color - The text color of the button.
+ * @param {string} border - The border color of the button.
+ */
 const PrimaryButton = styled.button<IStyleButtonProps>`
     background-color: ${(props) => props.backgroundColor};
     cursor: pointer;
@@ -30,6 +43,15 @@ const PrimaryButton = styled.button<IStyleButtonProps>`
     }
 `;
 
+/**
+ * Using Linaria, the Secondary Button below is how we extend the PrimaryButton.
+ * This can be used to handle different treatments of the same component without
+ * the need to override all the CSS of the PrimaryButton.
+ * 
+ * It can still be passed props and still be made type safe.
+ * 
+ * @param {string} backgroundColor - The background color of the button.
+ */
 const SecondaryButton = styled(PrimaryButton)<IStyleButtonProps>`
     background-color: #fff;
 
@@ -47,6 +69,11 @@ const SecondaryButton = styled(PrimaryButton)<IStyleButtonProps>`
     }
 `;
 
+/**
+ * Everything in CSS-in-JS looks like a component.
+ * In this case, we are creating a component that will wrap the Icon and ButtonText.
+ * 
+ */
 const IconWrapper = styled.span`
     position: relative;
 `;
@@ -68,6 +95,14 @@ const Button: React.FC<IButtonProps> = (props) => {
         <>{children}</>
     )
     
+    /**
+     * Here you will see the backgroundColor prop being passed to the PrimaryButton.
+     * It uses colors.brand which is imported from SiteThemeContext - this value
+     * can be overridden by each engineer in the project-{one|two|three}.config.ts file.
+     * 
+     * This means that changing theme values for each site becomes less about changing CSS
+     * and more about changing a configuration.
+     */
     if (primary) {
         return (
             <PrimaryButton backgroundColor={colors.brand} type="button" disabled={disabled}>

@@ -63,6 +63,17 @@ const HeroCard: React.FC<IArticleProps> = ({ className, style, ...props }) => {
     );
 };
 
+/**
+ * The component below is an example of where Linaria and CSS-in-JS really becomes rewarding.
+ * Here we extend the React Component: HeroCard (above), but extend its styling to be used
+ * as the Main Hero Card on the homepage. 
+ * 
+ * You will see that I can reference components within this component that have already been
+ * defined, and alter their styling.
+ * 
+ * All these styles are scoped and isolated to the component they are defined in.
+ * This means that there is no risk of styles leaking out and affecting other components.
+ */
 export const PrimaryHeroCard = styled(HeroCard)`
     position: relative;
 
