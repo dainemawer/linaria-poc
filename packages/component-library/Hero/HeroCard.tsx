@@ -1,7 +1,7 @@
 import { IArticleProps, IStyleProps } from 'package-types/horizon';
 import { styled } from '@linaria/react';
 import { useContext } from 'react';
-import { SiteThemeContext } from 'package-context';
+import { SiteThemeContext } from 'package-components/context';
 import { getProjectTheme } from 'package-util';
 
 const Article = styled.article``;

@@ -1,6 +1,6 @@
 import { styled } from '@linaria/react';
 import { useContext } from 'react';
-import { SiteThemeContext } from 'package-context';
+import { SiteThemeContext } from 'package-components/context';
 import { IButtonProps, IStyleButtonProps } from 'package-types/horizon';
 import Icon from '../Icon/index';
 

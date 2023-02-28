@@ -1,5 +1,7 @@
-import { SiteThemeContext } from 'package-context';
-import { theme, projectOneTheme, projectTwoTheme } from 'package-theme';
+import { SiteThemeContext } from 'package-components/context';
+import { theme } from '../base.config';
+import { projectTwoTheme } from 'project-two/project-two.config';
+import { projectOneTheme } from 'project-one/project-one.config';
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },

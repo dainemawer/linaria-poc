@@ -4,7 +4,7 @@ import HeroGrid from './HeroGrid';
 
 import { PrimaryHeroCard } from './HeroCard';
 import { useContext } from 'react';
-import { SiteThemeContext } from 'package-context';
+import { SiteThemeContext } from 'package-components/context';
 import { getProjectTheme } from 'package-util';
 
 const HeroContainer = styled.section`

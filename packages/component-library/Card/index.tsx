@@ -1,6 +1,6 @@
 import { styled } from '@linaria/react';
 import { useContext } from 'react';
-import { SiteThemeContext } from 'package-context';
+import { SiteThemeContext } from 'package-components/context';
 import { ICardProps, IStyleButtonProps } from 'package-types/horizon';
 
 const Article = styled.article<IStyleButtonProps>``;

@@ -1,4 +1,4 @@
-import { theme } from './base.config'
+import { theme } from 'package-components/base.config'
 import { IThemeProps } from 'package-types/horizon'
 
 export const projectOneTheme: IThemeProps = {

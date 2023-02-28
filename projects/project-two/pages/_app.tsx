@@ -1,6 +1,6 @@
 import type { AppProps } from 'next/app'
-import { SiteThemeContext } from 'package-context';
-import { projectTwoTheme } from 'package-theme';
+import { SiteThemeContext } from 'package-components/context';
+import { projectTwoTheme } from '../project-two.config';
 
 export default function MyApp({ Component, pageProps }: AppProps) {
     return (
